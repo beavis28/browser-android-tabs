@@ -10,6 +10,7 @@
 #include "base/trace_event/trace_event.h"
 #include "blimp/client/public/android/blimp_jni_registrar.h"
 #include "chrome/browser/after_startup_task_utils_android.h"
+#include "chrome/browser/brave_sync_worker.h"
 #include "chrome/browser/android/accessibility/font_size_prefs_android.h"
 #include "chrome/browser/android/appmenu/app_menu_drag_helper.h"
 #include "chrome/browser/android/banners/app_banner_infobar_delegate_android.h"
@@ -376,6 +377,7 @@ static base::android::RegistrationMethod kChromeRegisteredMethods[] = {
 #if BUILDFLAG(ENABLE_SPELLCHECK)
     {"SpellCheckerSessionBridge", spellcheck::android::RegisterSpellcheckJni},
 #endif
+    {"BraveSyncWorker", brave_sync_storage::BraveSyncWorker::RegisterBraveSyncStorage},
     {"ShieldsConfig", net::blockers::ShieldsConfig::RegisterShieldsConfig},
     {"SqliteCursor", SQLiteCursor::RegisterSqliteCursor},
     {"SSLClientCertificateRequest",

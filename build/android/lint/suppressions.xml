@@ -21,6 +21,12 @@ Still reading?
   Note: PRODUCT_DIR will be substituted at run-time with actual
   directory path (e.g. out/Debug)
 -->
+  <issue id="AddJavascriptInterface" severity="Error">
+    <ignore regexp="chrome/android/java/src/org/chromium/chrome/browser/BraveSyncWorker.java"/>
+  </issue>
+  <issue id="NewApi" severity="Error">
+    <ignore regexp="chrome/android/java/src/org/chromium/chrome/browser/BraveSyncWorker.java"/>
+  </issue>
   <issue id="AllowBackup">
     <ignore path="AndroidManifest.xml"/>
   </issue>
@@ -315,7 +321,7 @@ Still reading?
     <ignore regexp="blimp/client/app/android/java/res/values/dimens.xml"/>
     <ignore regexp="blimp/client/app/android/java/res/xml/about_blimp_preferences.xml"/>
     <ignore regexp="blimp/client/app/android/java/res/xml/blimp_preferences.xml"/>
-    <ignore regexp="blimp/client/core/resources/android/java/res/*" />    
+    <ignore regexp="blimp/client/core/resources/android/java/res/*" />
     <!-- TODO(crbug.com/635567): Fix this properly. -->
     <ignore regexp="chrome/android/java/res/drawable-hdpi/*"/>
     <ignore regexp="chrome/android/java/res/drawable-hdpi/amex_card.png"/>
